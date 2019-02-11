@@ -23,3 +23,10 @@ def you(request, name):
 
 def cube(request, num):
     return render(request, 'cube.html', {'cnum' : num**3, 'num' : num})
+    
+def ping(request):
+    return render(request, 'ping.html')
+    
+def pong(request):
+    msg = request.GET.get('message')
+    return render(request, 'pong.html', {'msg': msg})
