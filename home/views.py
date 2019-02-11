@@ -17,3 +17,9 @@ def dinner(request):
     return render(request, 'dinner.html', {'dinner': dinner, 'box': box})
     # template은 기본적으로 문법이 jinja2랑 같은데, 장고에서는 DTL을 쓴다.
     # Django Template Language
+
+def you(request, name):
+    return render(request, 'you.html', {'name': name})
+
+def cube(request, num):
+    return render(request, 'cube.html', {'cnum' : num**3, 'num' : num})

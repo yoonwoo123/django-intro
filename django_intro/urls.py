@@ -23,5 +23,6 @@ urlpatterns = [
     # 요청이 home/으로 오면, views의 index
     path('home/', views.index),
     path('home/dinner/', views.dinner),
-
+    path('home/you/<name>/', views.you),
+    path('home/cube/<int:num>/', views.cube),
 ]
