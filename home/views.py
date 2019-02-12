@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 import random
+import datetime
 
 # Create your views here.
 def index(request):
@@ -38,4 +39,12 @@ def user_read(request):
     id = request.POST.get('id')
     password = request.POST.get('password')
     return render(request, 'user_read.html',{'id' : id, 'password' : password})
-    
+
+def template_example(request):
+    my_dict = {'name': 'kim', 'nickname': 'edutak', 'age': 100}
+    my_list = ['짜장면', '짬뽕', '탕수육', '양장피']
+    my_sentence = 'Life is short, you need python!'
+    messages = ['apple', 'banana', 'cucumber', 'mango']
+    now = datetime.datetime.now()
+    empty_list = []
+    return render(request, 'template_example.html', {'my_list' : my_list, 'my_dict' : my_dict, 'my_sentence': my_sentence, 'messages': messages, 'now': now, 'empty_list': empty_list})
