@@ -11,7 +11,7 @@
     <p>{{ user }}</p>
     {% empty %}
         <p>지금 가입된 유저가 없습니다.</p>
-{% endfor}
+{% endfor %}
 <hr>
 <p>2. 조건문</p>
 {% if '짜장면' in my_list %}
@@ -56,3 +56,5 @@
 {% now "SHORT_DATE_FORMAT" %}<br>
 {% now "DATE_FORMAT" %}<br>
 {% now "Y년 m월 d일 (l) h:i" %}<br>
+<hr>
+{{ datetimenow|date:"SHORT_DATE_FORMAT" }}
